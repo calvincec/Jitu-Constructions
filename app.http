@@ -1,0 +1,32 @@
+###CREATE A NEW PROJECT
+POST http://localhost:4500/project
+Content-Type: application/json
+
+{
+    "project_name": "Build Stadium",
+    "description": "Build a stadium capable of holding 40000 people",
+    "project_location": "Nyeri",
+    "startdate": "24/7/2023",
+    "enddate": "24/7/2025"
+}
+
+###VIEW ALL PROJECTS        (these hashtags separates the two parts to prevent being run from top to bottom)
+GET http://localhost:4500/project
+
+### GET ONE PROJECT BY ID
+GET http://localhost:4500/project/a13c2ee6-95a0-484d-85c6-1820070a2e38
+
+### UPDATING ONE PROJECT BY ID
+PUT  http://localhost:4500/project/a13c2ee6-95a0-484d-85c6-1820070a2e38
+Content-Type: application/json
+
+{
+    "project_name": "Build a school",
+    "description": "Build the kirinyaga brodge",
+    "project_location": "Tharaka Nithi",
+    "startdate": "07/7/2023",
+    "enddate": "07/7/2025"
+}
+
+### DELETING A PROJECT BY ID
+DELETE http://localhost:4500/project/4369ce95-f385-4ae4-b836-fe11c8764586
